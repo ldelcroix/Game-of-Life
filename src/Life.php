@@ -65,4 +65,43 @@ class Life
 		}
 	}
 
+	static public function printArrayTable ($table) {
+
+		echo "<meta http-equiv='refresh' content='1'>";
+	
+		echo "<style>table { border-collapse: collapse; empty-cells: show; } tr { height:21px; } td { width:20px; height:20px; border:1px solid grey; padding:0; margin:0; } .alive{ background-color:black; }</style>";
+
+		echo "<table cellpadding='0' cellspacing='0'>";
+
+		foreach ($table as $line) {
+
+			echo "<tr>";
+
+			foreach ($line as $cell) {
+
+				echo "<td class='" . (($cell == 1) ? "alive" : "dead") . "'></td>";
+			}
+
+			echo '</tr>';
+		}
+
+		echo "</table>";
+	}
+
+	static public function getFileArray () {
+	
+		$file = file_get_contents(TEMP_FILE_ARRAY);
+
+		$array = unserialize($file);
+
+		return $array;
+	}
+
+	static public function setFileArray ($array) {
+
+		$string = serialize($array);
+	
+		$file = file_put_contents(TEMP_FILE_ARRAY, $string);
+	}
+
 }
