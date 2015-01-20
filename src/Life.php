@@ -67,7 +67,7 @@ class Life
 
 	static public function printArrayTable ($table) {
 
-		echo "<meta http-equiv='refresh' content='1'>";
+		echo "<meta http-equiv='refresh' content='0.01'>";
 	
 		echo "<style>table { border-collapse: collapse; empty-cells: show; } tr { height:21px; } td { width:20px; height:20px; border:1px solid grey; padding:0; margin:0; } .alive{ background-color:black; }</style>";
 
