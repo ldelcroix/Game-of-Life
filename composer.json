@@ -1,3 +1,4 @@
 {
-  "name":"ldelcroix/game-of-life"
+  "name":"ldelcroix/game-of-life",
+  "minimum-stability": "dev"
 }
